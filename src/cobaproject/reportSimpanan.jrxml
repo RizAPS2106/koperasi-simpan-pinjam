@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9d359afc-6317-4de0-b846-44693282b644">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="11"/>
+	<style name="Title" fontName="Times New Roman" fontSize="50" isBold="true" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#736343" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<style name="Row" mode="Transparent">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#E6DAC3"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT saldo.id, saldo.idanggota, anggota.nama, saldo.saldowajib, saldo.saldopokok, saldo.saldosukarela FROM saldo INNER JOIN anggota ON saldo.idanggota = anggota.id]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idanggota" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldowajib" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldopokok" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldosukarela" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="saldowajib_1" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{saldowajib}]]></variableExpression>
+	</variable>
+	<variable name="saldopokok_1" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{saldopokok}]]></variableExpression>
+	</variable>
+	<variable name="saldosukarela_1" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{saldosukarela}]]></variableExpression>
+	</variable>
+	<variable name="saldosukarela_2" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{saldosukarela}]]></variableExpression>
+	</variable>
+	<variable name="saldosukarela_3" class="java.lang.Integer" resetType="Column" calculation="Sum">
+		<variableExpression><![CDATA[$F{saldosukarela}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="136" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="b5abb14e-5f22-4305-ba72-dede11152e8b" style="Title" x="149" y="0" width="504" height="62" forecolor="#000099"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Koperasi Simpan Pinjam]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2d78d543-9488-4b29-ba9b-185538aa6fdf" style="SubTitle" x="303" y="62" width="196" height="22" forecolor="#6666FF"/>
+				<textElement>
+					<font fontName="Times New Roman" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[Laporan Data Simpanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c487466f-4242-4f9d-9b32-2c1ef119cab2" x="1" y="96" width="166" height="13" forecolor="#000099"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Jalan Terusan Cimahi Tengah]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="30800d77-397a-454d-b3da-432a8f658d51" style="Column header" x="0" y="109" width="197" height="16" forecolor="#000099"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<line>
+				<reportElement uuid="1a3815be-dcc3-4585-bdf6-030900e91a81" positionType="FixRelativeToBottom" x="0" y="15" width="802" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="1119f092-cc88-42a6-9b63-60f7033bf531" style="Column header" x="0" y="0" width="133" height="15" forecolor="#0000CC"/>
+				<textElement/>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4bb4d718-fa65-42d3-aebf-b9f704f37387" style="Column header" x="133" y="0" width="133" height="15" forecolor="#0000CC"/>
+				<textElement/>
+				<text><![CDATA[idanggota]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9651385d-10b8-44b8-b2f4-61f658684d96" style="Column header" x="266" y="0" width="133" height="15" forecolor="#0000CC"/>
+				<textElement/>
+				<text><![CDATA[nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="264ee15c-3f0a-43ff-8216-5414fc876c9d" style="Column header" x="399" y="0" width="133" height="15" forecolor="#0000CC"/>
+				<textElement/>
+				<text><![CDATA[saldowajib]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="24ad51b1-26a7-47f1-8736-f58f5ef4c8a6" style="Column header" x="532" y="0" width="133" height="15" forecolor="#0000FF"/>
+				<textElement/>
+				<text><![CDATA[saldopokok]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5daf0c62-36e9-4cbe-a4a8-2879e91c03b8" style="Column header" x="665" y="0" width="133" height="15" forecolor="#0000CC"/>
+				<textElement/>
+				<text><![CDATA[saldosukarela]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="15" splitType="Stretch">
+			<frame>
+				<reportElement uuid="c5556d64-4401-4d68-8145-0478e8834391" style="Row" mode="Opaque" x="0" y="0" width="802" height="15"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="ed710bf5-ea9b-46c4-92d2-c065ce9c8956" style="Detail" x="0" y="0" width="133" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="7be0e282-6713-4389-a7d6-6253f3e1e040" style="Detail" x="133" y="0" width="133" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{idanggota}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="5a6479e4-e5d6-4114-a673-80f26b0e53a3" style="Detail" x="266" y="0" width="133" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="16a2a07b-a2bc-4264-b9d0-d638191ea6ed" style="Detail" x="399" y="0" width="133" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{saldowajib}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="9824f279-59de-4cab-8813-f60be7e60e17" style="Detail" x="532" y="0" width="133" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{saldopokok}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement uuid="1fdba105-aab9-4a07-8c92-a1aa0e867fd0" style="Detail" x="665" y="0" width="133" height="15"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{saldosukarela}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="203" splitType="Stretch">
+			<line>
+				<reportElement uuid="d5b47959-1fb9-4ab6-a098-dfc0d82ea0f7" positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement uuid="b1c7feed-ede7-4859-8316-f93b0893b865" x="167" y="18" width="81" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{saldowajib_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="806d5677-eb46-404f-9d1d-dd24d87d625f" x="447" y="18" width="74" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{saldopokok_1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f341405a-eeee-4247-ae34-deb3d476a8d9" x="738" y="18" width="64" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{saldosukarela_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1119f092-cc88-42a6-9b63-60f7033bf531" style="Column header" x="0" y="18" width="167" height="15" forecolor="#000099"/>
+				<textElement/>
+				<text><![CDATA[TOTAL SIMPANAN WAJIB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1119f092-cc88-42a6-9b63-60f7033bf531" style="Column header" x="266" y="18" width="181" height="15" forecolor="#000099"/>
+				<textElement/>
+				<text><![CDATA[TOTAL SIMPANAN POKOK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="1119f092-cc88-42a6-9b63-60f7033bf531" style="Column header" x="542" y="18" width="181" height="15" forecolor="#000099"/>
+				<textElement/>
+				<text><![CDATA[TOTAL SIMPANAN SUKARELA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b45383d2-b0d5-4dc5-8f7f-61d4e2fa0b75" style="Column header" x="546" y="91" width="86" height="15" forecolor="#0000CC"/>
+				<textElement/>
+				<text><![CDATA[Administrator]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="490aa0a4-90e0-40fa-baf5-6082ccbdd369" mode="Opaque" x="542" y="178" width="264" height="1" forecolor="#D0B48E" backcolor="#000000"/>
+			</frame>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement uuid="fe9494bf-d346-4166-8a98-3f1da92cdde6" mode="Opaque" x="-21" y="1" width="843" height="24" forecolor="#9999FF" backcolor="#9999FF"/>
+				<textField evaluationTime="Report">
+					<reportElement uuid="576aef94-53c0-4b30-917f-98d1e20f27c5" style="Column header" x="783" y="1" width="40" height="20" forecolor="#0000CC"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement uuid="131e3b17-5c13-48ad-a732-04470d613d06" style="Column header" x="703" y="1" width="80" height="20" forecolor="#0000CC"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
