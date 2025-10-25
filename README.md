@@ -2,7 +2,7 @@
 
 Berfungsi untuk mengelola data penyimpanan dan peminjaman di koperasi simpan pinjam, dengan berbagai validasi didalamnya, dibangun dengan menggunakan bahasa java untuk platform desktop.
 
-## Fitur 
+## Fitur Utama
 - Pengelolaan data 'Petugas/Administrator' sebagai petugas yang mengelola transaksi dari anggota.
 - Pengelolaan data 'Anggota/User' dengan modul pendaftaran.
 - Pengelolaan data 'Simpanan' dengan aturan/ketentuan 'Koperasi Umum'.
@@ -10,3 +10,6 @@ Berfungsi untuk mengelola data penyimpanan dan peminjaman di koperasi simpan pin
 - Pengelolaan data 'Pembayaran' dengan angsuran.
 - Pengelolaan data 'Tabungan' untuk anggota koperasi agar deposit dan tarikan uang di koperasi dapat terekam dengan baik.
 - Mencetak Transaksi dengan format PDF agar dapat di-Print.
+
+###
+Originally Developed By, *Rizky Aditya Perkasa Susila*
