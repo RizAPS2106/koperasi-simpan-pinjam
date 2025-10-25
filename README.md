@@ -12,5 +12,4 @@ Berfungsi untuk mengelola data penyimpanan dan peminjaman di koperasi simpan pin
 - Mencetak 'Struk Transaksi' dengan format PDF agar dapat di-Print.
 - Reporting dengan format PDF untuk 'Data Anggota', 'Data Petugas', 'Saldo Tabungan Anggota', 'Kwitansi' dan Laporan Transaksi Lainnya.
 
-###
-Originally Developed By, *Rizky Aditya Perkasa Susila*
+### Developed By, *Rizky Aditya Perkasa Susila*
