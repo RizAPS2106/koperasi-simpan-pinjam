@@ -9,7 +9,8 @@ Berfungsi untuk mengelola data penyimpanan dan peminjaman di koperasi simpan pin
 - Pengelolaan data 'Pinjaman' dengan aturan/ketentuan 'Koperasi Umum'.
 - Pengelolaan data 'Pembayaran' dengan angsuran.
 - Pengelolaan data 'Tabungan' untuk anggota koperasi agar deposit dan tarikan uang di koperasi dapat terekam dengan baik.
-- Mencetak Transaksi dengan format PDF agar dapat di-Print.
+- Mencetak 'Struk Transaksi' dengan format PDF agar dapat di-Print.
+- Reporting dengan format PDF untuk 'Data Anggota', 'Data Petugas', 'Saldo Tabungan Anggota', 'Kwitansi' dan Laporan Transaksi Lainnya.
 
 ###
 Originally Developed By, *Rizky Aditya Perkasa Susila*
